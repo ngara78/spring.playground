@@ -38,3 +38,7 @@ server:
 logging:
   level:
     org.springframework.web: DEBUG
+
+security:
+  basic:
+    enabled: false
