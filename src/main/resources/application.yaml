@@ -20,7 +20,6 @@ spring:
         cache-public: true # The resources are public and any cache may store the response.
 
 server:
-  apiPath: /api
   compression:
     enabled: true
     mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
