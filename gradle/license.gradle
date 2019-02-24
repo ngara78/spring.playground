@@ -1,6 +1,4 @@
-plugins {
-    id "com.github.hierynomus.license" version "0.15.0"
-}
+apply plugin: "com.github.hierynomus.license"
 
 license {
     ext.year = Calendar.getInstance().get(Calendar.YEAR)
