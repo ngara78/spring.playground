@@ -16,6 +16,8 @@ spring:
     console:
       enable: true
     path: /db
+  liquibase:
+    change-log: classpath:liquibase/db.changelog-master.yaml
   resources:
     cache:
       cachecontrol:

@@ -1,0 +1,7 @@
+databaseChangeLog:
+
+  - include:
+      file: liquibase/changelogs/0000_initial_schema_setup.sql
+# includeAll seems to work locally but not on remote system (in liquibase 3.6.2): See https://liquibase.jira.com/browse/CORE-3344 and https://liquibase.jira.com/browse/CORE-3284
+#  - includeAll:
+#      path: liquibase/changelogs
