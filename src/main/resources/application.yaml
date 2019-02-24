@@ -1,2 +1,36 @@
 spring:
   application.name: playground
+  main.allow-bean-definition-overriding: true
+  datasource:
+    #url: jdbc:h2:file:~/playground-db
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enable: true
+    path: /db
+  resources:
+    cache:
+      cachecontrol:
+        max-age: 120 # Maximum time the response should be cached (in seconds)
+        must-revalidate: true # The cache must re-validate stale resources with the server. Any expired resources must not be used without re-validating.
+        cache-private: false # The resources are private and intended for a single user. They must not be stored by a shared cache (e.g CDN).
+        cache-public: true # The resources are public and any cache may store the response.
+
+server:
+  apiPath: /api
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+  http2:
+    enabled: true
+  port: 9000
+  servlet:
+    context-path: /playground
+
+logging:
+  level:
+    org.springframework.web: DEBUG
