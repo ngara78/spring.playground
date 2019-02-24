@@ -31,3 +31,4 @@ out/
 # standard project file for IntelliJ
 .idea/
 
+/HELP.md
